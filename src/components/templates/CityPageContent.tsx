@@ -15,18 +15,18 @@ export function CityPageContent({ stateSlug, citySlug }: { stateSlug: string; ci
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://bulkctc.com" },
-        { "@type": "ListItem", position: 2, name: stateName, item: `https://bulkctc.com/${stateSlug}` },
-        { "@type": "ListItem", position: 3, name: cityInfo.city, item: `https://bulkctc.com/${stateSlug}/${citySlug}` },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://marketingvia.in" },
+        { "@type": "ListItem", position: 2, name: stateName, item: `https://marketingvia.in/${stateSlug}` },
+        { "@type": "ListItem", position: 3, name: cityInfo.city, item: `https://marketingvia.in/${stateSlug}/${citySlug}` },
       ],
     },
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "@id": `https://bulkctc.com/${stateSlug}/${citySlug}`,
+      "@id": `https://marketingvia.in/${stateSlug}/${citySlug}`,
       name: `BulkCTC — ${cityInfo.city}`,
       description: `Bulk CTC tea wholesale supplier serving ${cityInfo.city}, ${cityInfo.state}.`,
-      url: `https://bulkctc.com/${stateSlug}/${citySlug}`,
+      url: `https://marketingvia.in/${stateSlug}/${citySlug}`,
       areaServed: [cityInfo.city, ...cityInfo.nearbyAreas].map((area) => ({
         "@type": "City",
         name: area,

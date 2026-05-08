@@ -42,7 +42,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "BulkCTC",
-    url: "https://bulkctc.com",
+    url: "https://marketingvia.in",
     description: "Bulk CTC tea wholesale supplier across India. Direct from Assam and Dooars gardens.",
   };
 

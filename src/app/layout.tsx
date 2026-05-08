@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     ),
     images: [
       {
-        url: "https://bulkctc.com/og.png",
+        url: "https://marketingvia.in/og.png",
         width: 1200,
         height: 630,
         alt: "BulkCTC — Wholesale Bulk CTC Tea Across India",
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     description: generateDescription(
       "Wholesale bulk CTC tea for hotels, factories, offices, and institutions across India. Direct from Assam and Dooars gardens."
     ),
-    images: ["https://bulkctc.com/og.png"],
+    images: ["https://marketingvia.in/og.png"],
   },
 };
 

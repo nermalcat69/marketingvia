@@ -1,11 +1,11 @@
 ## Website
 
-Go [Preview](https://.bulkctc.com)
+Go [Preview](https://.marketingvia.in)
 
 Other Links
 
-- [Fun.bulkctc.com](https://fun.bulkctc.com)
-- [docs.bulkctc.com](https://docs.bulkctc.com)
+- [Fun.marketingvia.in](https://fun.marketingvia.in)
+- [docs.marketingvia.in](https://docs.marketingvia.in)
 - [github.com/coldran](https://github.com/coldran)
 
 If you want to contribute, first open an issue :D

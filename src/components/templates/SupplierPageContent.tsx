@@ -62,17 +62,17 @@ export function SupplierPageContent({ slug }: { slug: string }) {
 
   const locationName = data.type === "city" ? data.city.city : data.stateName;
   const locationContext = data.type === "city" ? `${data.city.city}, ${data.stateName}` : data.stateName;
-  const canonicalUrl = `https://bulkctc.com/${slug}`;
+  const canonicalUrl = `https://marketingvia.in/${slug}`;
   const parentUrl = data.type === "city"
-    ? `https://bulkctc.com/${data.stateSlug}/${slugify(data.city.city)}`
-    : `https://bulkctc.com/${data.stateSlug}`;
+    ? `https://marketingvia.in/${data.stateSlug}/${slugify(data.city.city)}`
+    : `https://marketingvia.in/${data.stateSlug}`;
 
   const jsonLd = [
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://bulkctc.com" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://marketingvia.in" },
         { "@type": "ListItem", position: 2, name: `${locationName} Bulk Suppliers`, item: canonicalUrl },
       ],
     },

@@ -66,12 +66,12 @@ export default function SitesPage() {
           </ul>
 
           <Link
-            href="https://bulkctc.com"
+            href="https://marketingvia.in"
             className="mt-6 inline-block font-medium text-primary-600 hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visit bulkctc.com →
+            Visit marketingvia.in →
           </Link>
         </div>
 

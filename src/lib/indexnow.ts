@@ -1,5 +1,5 @@
 const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow";
-const SITE_URL = process.env.SITE_URL ?? "https://bulkctc.com";
+const SITE_URL = process.env.SITE_URL ?? "https://marketingvia.in";
 const HOST = new URL(SITE_URL).host;
 const BATCH_SIZE = 50;
 

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://bulkctc.com
+Host: https://marketingvia.in
 
 # Sitemaps
-Sitemap: https://bulkctc.com/sitemap.xml
+Sitemap: https://marketingvia.in/sitemap.xml

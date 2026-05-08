@@ -95,7 +95,7 @@ export default function PrivacyPolicyChromeExt() {
             contact us at:
           </p>
           <p className="mt-2 font-medium">
-            office@bulkctc.com
+            office@marketingvia.in
           </p>
         </section>
       </div>

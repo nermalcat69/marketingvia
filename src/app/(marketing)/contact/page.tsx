@@ -77,20 +77,20 @@ const tiers: Tier[] = [
     description: "We usually respond within 48 hours.",
     cta: "Send Mail",
     ctaVariant: "blue",
-    features: ["office@bulkctc.com"],
+    features: ["office@marketingvia.in"],
   },
   {
     name: "Legal & Compliance",
     description: "We usually respond within 48 hours.",
     cta: "Send Mail",
     ctaVariant: "red",
-    features: ["legal@bulkctc.com"],
+    features: ["legal@marketingvia.in"],
   },
   {
     name: "Marketing & PR",
     description: "We usually respond within 48 hours.",
     cta: "Send Mail",
-    features: ["marketing@bulkctc.com"],
+    features: ["marketing@marketingvia.in"],
   },
   {
     name: "Call Us",
@@ -152,7 +152,7 @@ export default function PricingPage() {
                   <ul className="mt-4 flex flex-col gap-4 px-6 pb-8 text-sm">
                     <li className="flex items-start gap-3">
                       <span>#</span>
-                      <span>sales@bulkctc.com</span>
+                      <span>sales@marketingvia.in</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -197,7 +197,7 @@ export default function PricingPage() {
                   <ul className="mt-4 flex flex-col gap-4 px-6 pb-8 text-sm">
                     <li className="flex items-start gap-3">
                       <span>#</span>
-                      <span>arjun@bulkctc.com</span>
+                      <span>arjun@marketingvia.in</span>
                     </li>
                   </ul>
                 </CardContent>

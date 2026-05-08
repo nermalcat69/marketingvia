@@ -46,8 +46,8 @@ export function StatePageContent({ stateSlug }: { stateSlug: string }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://bulkctc.com" },
-      { "@type": "ListItem", position: 2, name: stateName, item: `https://bulkctc.com/${stateSlug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://marketingvia.in" },
+      { "@type": "ListItem", position: 2, name: stateName, item: `https://marketingvia.in/${stateSlug}` },
     ],
   };
 
