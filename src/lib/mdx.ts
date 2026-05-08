@@ -15,6 +15,18 @@ interface NewsroomPost {
   content: string;
 }
 
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  author: string;
+  tag: string;
+  published: boolean;
+  readingTime: string;
+  content: string;
+}
+
 export async function getNewsroomPosts(): Promise<NewsroomPost[]> {
   try {
     const newsroomDir = path.join(process.cwd(), "content/newsroom");
@@ -84,6 +96,87 @@ export function getAllSlugs(): string[] {
 
   try {
     const fileNames = fs.readdirSync(directory);
+    return fileNames
+      .filter((name) => name.endsWith(".mdx"))
+      .map((fileName) => fileName.replace(/\.mdx$/, ""));
+  } catch (error) {
+    return [];
+  }
+}
+
+// Blog functions
+
+export function getBlogPosts(): BlogPost[] {
+  try {
+    const blogDir = path.join(process.cwd(), "content/blog");
+
+    if (!fs.existsSync(blogDir)) {
+      return [];
+    }
+
+    const files = fs.readdirSync(blogDir);
+    return files
+      .filter((file) => file.endsWith(".mdx"))
+      .map((file) => {
+        const slug = file.replace(".mdx", "");
+        const filePath = path.join(blogDir, file);
+        const fileContent = fs.readFileSync(filePath, "utf8");
+        const { data, content } = matter(fileContent);
+
+        return {
+          slug,
+          title: data.title || "",
+          description: data.description || "",
+          date: data.date || "",
+          author: data.author || "MarketingVia",
+          tag: data.tag || "Insights",
+          published: data.published !== false,
+          readingTime: data.readingTime || "5 min read",
+          content: content || "",
+        };
+      })
+      .filter((post) => post.published)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  } catch (error) {
+    console.error("Error reading blog posts:", error);
+    return [];
+  }
+}
+
+export function getBlogPost(slug: string): BlogPost | null {
+  const blogDir = path.join(process.cwd(), "content/blog");
+  const filePath = path.join(blogDir, `${slug}.mdx`);
+
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+
+  try {
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    const { data, content } = matter(fileContent);
+
+    return {
+      slug,
+      content,
+      title: data.title || "",
+      description: data.description || "",
+      date: data.date || "",
+      author: data.author || "MarketingVia",
+      tag: data.tag || "Insights",
+      published: data.published !== false,
+      readingTime: data.readingTime || "5 min read",
+    };
+  } catch (error) {
+    console.error(`Error loading blog post ${slug}:`, error);
+    return null;
+  }
+}
+
+export function getAllBlogSlugs(): string[] {
+  const blogDir = path.join(process.cwd(), "content/blog");
+
+  try {
+    const fileNames = fs.readdirSync(blogDir);
     return fileNames
       .filter((name) => name.endsWith(".mdx"))
       .map((fileName) => fileName.replace(/\.mdx$/, ""));

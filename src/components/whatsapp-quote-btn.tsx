@@ -36,4 +36,4 @@ export function WhatsAppQuoteBtn({
 }
 
 export const WHATSAPP_DEFAULT_MESSAGE =
-  "Hi, I found your number on MarketingVia and I would like to enquire about bulk CTC tea.";
+  "Hi, I found MarketingVia and I'd like to enquire about the Authority & Recall Program for my personal branding.";

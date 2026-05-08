@@ -1,252 +1,118 @@
-"use client";
+import type { Metadata } from "next";
+import Link from "next/link";
 
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardDescription,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-
-type Tier = {
-  name: string;
-  description: string;
-  cta: string;
-  ctaVariant?: "default" | "blue" | "red";
-  features: string[];
-  flagText?: string;
+export const metadata: Metadata = {
+  title: "Contact MarketingVia – Apply for the Authority & Recall Program",
+  description:
+    "Apply for the 90-day Authority & Recall Program. Slots are limited. We review every application individually.",
 };
 
-/* ---------- Single borderless plan column ---------- */
-function PricingCard({
-  tier,
-  columnRef,
-}: {
-  tier: Tier;
-  columnRef?: React.RefObject<HTMLDivElement | null>;
-}) {
+export default function ContactPage() {
   return (
-    <div ref={columnRef} className="relative">
-      <Card className="p-0 shadow-none border-0 rounded-none bg-white">
-        <div className="flex flex-col">
-          <CardHeader className="pt-4">
-            <CardTitle className="text-lg font-semibold">{tier.name}</CardTitle>
-          </CardHeader>
+    <div className="bg-white">
+      {/* Header */}
+      <section className="max-w-6xl mx-auto px-6 pt-16 pb-12">
+        <p className="text-xs font-medium uppercase tracking-widest text-neutral-400 mb-6">
+          Contact
+        </p>
+        <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-neutral-900 leading-none mb-6">
+          Let's talk.
+        </h1>
+        <p className="text-lg text-neutral-600 max-w-xl leading-relaxed">
+          Applications for the 90-day Authority & Recall Program are reviewed individually. Slots are limited to ensure we deliver full quality to every client.
+        </p>
+      </section>
 
-          <CardContent className="p-0">
-            <div className="flex w-full flex-col items-start gap-4 pb-4 px-6">
-              <div className="mb-6 flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <p className="text-sm text-neutral-700">{tier.description}</p>
-                </div>
-              </div>
-              <Button
-                className="w-full h-10 rounded-lg"
-                variant={tier.ctaVariant ?? "default"}
-              >
-                {tier.cta}
-              </Button>
-            </div>
-
-            <Separator className="my-5" />
-
-            <ul className="mt-4 flex flex-col gap-4 px-6 pb-4 text-sm">
-              {tier.features.map((f) => (
-                <li key={f} className="flex items-start gap-3">
-                  #<span>{f}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </div>
-      </Card>
-    </div>
-  );
-}
-
-// tracking-[-0.15rem] for dollars and money
-
-/* ---------- Example data ---------- */
-const tiers: Tier[] = [
-  {
-    name: "General Enquires",
-    description: "We usually respond within 48 hours.",
-    cta: "Send Mail",
-    ctaVariant: "blue",
-    features: ["office@marketingvia.in"],
-  },
-  {
-    name: "Legal & Compliance",
-    description: "We usually respond within 48 hours.",
-    cta: "Send Mail",
-    ctaVariant: "red",
-    features: ["legal@marketingvia.in"],
-  },
-  {
-    name: "Marketing & PR",
-    description: "We usually respond within 48 hours.",
-    cta: "Send Mail",
-    features: ["marketing@marketingvia.in"],
-  },
-  {
-    name: "Call Us",
-    description: "If we miss your call, we'll call you back.",
-    cta: "Call Now",
-    ctaVariant: "blue",
-    features: ["+91 000-work-in-progress"],
-  },
-];
-
-/* ---------- Page ---------- */
-export default function PricingPage() {
-  const frameRef = useRef<HTMLDivElement | null>(null);
-
-  return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 lg:px-6">
-        <div className="mb-16">
-          <h1 className="text-3xl md:text-4xl font-semibold text-black mb-4">
-            Contact Gray Cup
-          </h1>
-          <p className="text-lg text-muted-foreground">
-            Have a question or you want to do business with Gray Cup? There is
-            always a way to reach us.
-            <br />
-            Your message matters.
-          </p>
-        </div>
-
-        <div className="max-w-6xl flex flex-col md:flex-row justify-center items-center max-md:gap-5 md:justify-between mx-auto">
-          <div className="max-w-sm w-full ">
-            <Card className="p-0 border border-gray-200 rounded-2xl bg-white">
-              <div className="flex flex-col ">
-                <CardHeader className="pt-4">
-                  <CardTitle className="text-lg font-semibold">
-                    Sales & Purchases
-                  </CardTitle>
-                </CardHeader>
-
-                <CardContent className="p-0">
-                  <div className="flex w-full flex-col items-start gap-4 px-6 pb-4">
-                    <div className="mb-6 flex flex-col gap-2">
-                      <div className="flex items-center gap-2">
-                        <p className="text-sm text-neutral-700">
-                          We usually respond within 48 hours.
-                        </p>
-                      </div>
-                    </div>
-                    <Button
-                      className="w-full h-10 rounded-lg"
-                      variant="lightgray"
-                    >
-                      Send Mail
-                    </Button>
-                  </div>
-
-                  <Separator className="my-5" />
-
-                  <ul className="mt-4 flex flex-col gap-4 px-6 pb-8 text-sm">
-                    <li className="flex items-start gap-3">
-                      <span>#</span>
-                      <span>sales@marketingvia.in</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </div>
-            </Card>
-          </div>
-          <div className="flex-col sm:flex-row flex-wrap hidden lg:flex items-center py-4 gap-4 justify-center">
-            <Image
-              src="/coffee-beans.webp"
-              draggable="false"
-              alt="coffee beans"
-              width="280"
-              height="200"
-            />
-          </div>
-
-          <div className="max-w-sm w-full ">
-            <Card className="p-0 border border-gray-200 rounded-2xl bg-white">
-              <div className="flex flex-col ">
-                <CardHeader className="pt-4">
-                  <CardTitle className="text-lg font-semibold">
-                    Schedule Zoom Meeting
-                  </CardTitle>
-                </CardHeader>
-
-                <CardContent className="p-0">
-                  <div className="flex w-full flex-col items-start gap-4 px-6 pb-4">
-                    <div className="mb-6 flex flex-col gap-2">
-                      <div className="flex items-center gap-2">
-                        <p className="text-sm text-neutral-700">
-                          Arjun will be attending this meeting.
-                        </p>
-                      </div>
-                    </div>
-                    <Button className="w-full h-10 rounded-lg" variant="gray">
-                      Schedule
-                    </Button>
-                  </div>
-
-                  <Separator className="my-5" />
-
-                  <ul className="mt-4 flex flex-col gap-4 px-6 pb-8 text-sm">
-                    <li className="flex items-start gap-3">
-                      <span>#</span>
-                      <span>arjun@marketingvia.in</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </div>
-            </Card>
-          </div>
-        </div>
-        <div className="flex justify-between py-4">
-          <div className="flex-col sm:flex-row flex-wrap hidden lg:flex items-center gap-4 justify-start">
-            <Image
-              src="/tea-leaves.svg"
-              draggable="false"
-              alt="coffee beans"
-              width="160"
-              height="160"
-            />
-          </div>
-          <div className="flex-col sm:flex-row flex-wrap hidden lg:flex items-center gap-4 justify-end">
-            <Image
-              src="/tea-leaves.svg"
-              draggable="false"
-              alt="coffee beans"
-              width="160"
-              height="160"
-            />
-          </div>
-        </div>
-        <div className="max-w-6xl mx-auto mt-10">
-          {/* Wrapper must be relative so overlay positions correctly */}
-          <div className="relative">
-            {/* Framed container can be overflow-hidden now; corners stay clean */}
-            <div
-              ref={frameRef}
-              className="rounded-2xl max-md:max-w-sm max-md:mx-auto border border-gray-200 bg-white overflow-hidden"
+      {/* Contact cards */}
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+        <div className="grid md:grid-cols-3 gap-3">
+          <div className="bg-blue-600 text-white p-8">
+            <div className="text-xs uppercase tracking-widest text-blue-200 mb-4">Apply for the Program</div>
+            <div className="text-sm font-bold mb-2">Program Enquiries</div>
+            <p className="text-xs text-blue-100 leading-relaxed mb-6">
+              Tell us who you are, what your background is, and what you want to be known for. We usually respond within 48 hours.
+            </p>
+            <a
+              href="mailto:office@marketingvia.in"
+              className="inline-block text-xs font-medium border border-blue-300 text-white px-4 py-2 hover:bg-blue-500 transition-colors"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200">
-                {tiers.map((t) => {
-                  return (
-                    <div key={t.name} className="relative">
-                      <PricingCard tier={t} />
-                    </div>
-                  );
-                })}
+              office@marketingvia.in
+            </a>
+          </div>
+
+          <div className="bg-neutral-50 p-8">
+            <div className="text-xs uppercase tracking-widest text-neutral-400 mb-4">General & Media</div>
+            <div className="text-sm font-bold text-neutral-900 mb-2">Press & Partnerships</div>
+            <p className="text-xs text-neutral-500 leading-relaxed mb-6">
+              For podcast collaboration requests, award nominations, media partnerships, or press enquiries.
+            </p>
+            <a
+              href="mailto:marketing@marketingvia.in"
+              className="inline-block text-xs font-medium border border-neutral-300 text-neutral-700 px-4 py-2 hover:bg-neutral-200 transition-colors"
+            >
+              marketing@marketingvia.in
+            </a>
+          </div>
+
+          <div className="bg-neutral-900 text-white p-8">
+            <div className="text-xs uppercase tracking-widest text-neutral-400 mb-4">Quick Chat</div>
+            <div className="text-sm font-bold mb-2">Schedule a Call</div>
+            <p className="text-xs text-neutral-400 leading-relaxed mb-6">
+              Arjun will be on this call. Use this if you want to understand whether the program is the right fit before applying.
+            </p>
+            <a
+              href="https://cal.com/arjunaditya/30min"
+              target="_blank"
+              rel="noopener"
+              className="inline-block text-xs font-medium border border-neutral-600 text-white px-4 py-2 hover:bg-neutral-700 transition-colors"
+            >
+              Book 30 minutes →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* What happens after */}
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+        <p className="text-xs font-medium uppercase tracking-widest text-neutral-400 mb-8">
+          What Happens After You Reach Out
+        </p>
+        <div className="space-y-3">
+          {[
+            ["We review your background", "We look at who you are, what your family or political context is, and whether this is a genuine fit for both sides."],
+            ["One conversation", "If it looks like a fit, we schedule a 30-minute call. No pitch deck, no sales pressure — just a direct conversation."],
+            ["A clear proposal", "If we want to work together, you get a clear proposal: what we'll deliver, how we'll deliver it, timeline, and price."],
+            ["90 days begins", "Once agreed, we start Phase 1. You'll have a dedicated point of contact for the full engagement."],
+          ].map(([title, desc], i) => (
+            <div key={title as string} className="bg-neutral-50 p-6 flex gap-6">
+              <div className="text-2xl font-bold text-neutral-200 shrink-0 w-6">{i + 1}</div>
+              <div>
+                <div className="text-sm font-bold text-neutral-900 mb-1">{title}</div>
+                <div className="text-sm text-neutral-500 leading-relaxed">{desc}</div>
               </div>
             </div>
-          </div>
-          {/* end wrapper */}
+          ))}
         </div>
-      </div>
+      </section>
+
+      {/* Legal */}
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+        <div className="border-t border-neutral-100 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-widest text-neutral-400 mb-3">Legal & Compliance</p>
+            <a
+              href="mailto:legal@marketingvia.in"
+              className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+            >
+              legal@marketingvia.in
+            </a>
+          </div>
+          <div className="text-xs text-neutral-400 text-right">
+            <p>Gray Cup Enterprises Private Limited</p>
+            <p>CIN: U47211DL2025PTC457808 · GST: 07AAMCG4985H1Z2</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
