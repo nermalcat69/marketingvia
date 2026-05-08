@@ -65,7 +65,7 @@ function removeFile(filePath) {
 // ─── State pages ──────────────────────────────────────────────────────────────
 
 function generateStatePage(stateName, stateSlug) {
-  const title = `Bulk CTC Tea Supplier in ${stateName} | BulkCTC`;
+  const title = `Bulk CTC Tea Supplier in ${stateName} | MarketingVia`;
   const description = `Wholesale bulk CTC tea supply for businesses across ${stateName}. Hotels, factories, corporate offices, and institutions. Direct from Assam gardens.`;
 
   return `// AUTO-GENERATED — do not edit. Run: node scripts/generate-static-pages.mjs
@@ -87,7 +87,7 @@ export default function Page() {
 // ─── City pages ───────────────────────────────────────────────────────────────
 
 function generateCityPage(cityName, citySlug, stateName, stateSlug) {
-  const title = `Bulk CTC Tea Supplier in ${cityName}, ${stateName} | BulkCTC`;
+  const title = `Bulk CTC Tea Supplier in ${cityName}, ${stateName} | MarketingVia`;
   const description = `Wholesale bulk CTC tea for businesses in ${cityName}, ${stateName}. Direct delivery from Assam gardens. Hotels, factories, corporate offices. Min. order 50 kg.`;
 
   return `// AUTO-GENERATED — do not edit. Run: node scripts/generate-static-pages.mjs
@@ -110,8 +110,8 @@ export default function Page() {
 
 function generateSupplierPage(locationName, locationContext, slug, isState) {
   const title = isState
-    ? `Bulk CTC Tea Suppliers in ${locationName} — Gray Cup Enterprises | BulkCTC`
-    : `Bulk CTC Tea Suppliers in ${locationName} — Gray Cup Enterprises | BulkCTC`;
+    ? `Bulk CTC Tea Suppliers in ${locationName} — Gray Cup Enterprises | MarketingVia`
+    : `Bulk CTC Tea Suppliers in ${locationName} — Gray Cup Enterprises | MarketingVia`;
   const description = isState
     ? `Gray Cup Enterprises — the only 5-star rated bulk CTC tea supplier across ${locationContext}. Direct Assam & Dooars gardens. Trusted by institutions statewide. 10 verified reviews.`
     : `Gray Cup Enterprises — the only 5-star rated bulk CTC tea supplier in ${locationContext}. Trusted by hotels, factories, and corporate offices. 10 verified reviews.`;

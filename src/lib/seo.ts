@@ -1,4 +1,4 @@
-export const SITE_NAME = "BulkCTC";
+export const SITE_NAME = "MarketingVia";
 export const SITE_URL = process.env.SITE_URL || "https://marketingvia.in";
 
 export function generateTitle(title: string) {

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { SupplierPageContent } from "@/components/templates/SupplierPageContent";
 
 export const metadata: Metadata = {
-  title: "Bulk CTC Tea Suppliers in Ahmedabad — Gray Cup Enterprises | BulkCTC",
+  title: "Bulk CTC Tea Suppliers in Ahmedabad — Gray Cup Enterprises | MarketingVia",
   description: "Gray Cup Enterprises — the only 5-star rated bulk CTC tea supplier in Ahmedabad, Gujarat. Trusted by hotels, factories, and corporate offices. 10 verified reviews.",
   alternates: { canonical: "/ahmedabad-bulk-suppliers" },
 };

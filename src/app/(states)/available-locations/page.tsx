@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { getAllCities, slugify } from "@/lib/cityData";
 
 export const metadata: Metadata = {
-  title: "Bulk CTC Tea Locations — All States & Cities | BulkCTC",
+  title: "Bulk CTC Tea Locations — All States & Cities | MarketingVia",
   description:
-    "BulkCTC supplies wholesale CTC tea across 25 Indian states and 75+ cities. Find your state and city for delivery times, MOQ, and pricing.",
+    "MarketingVia supplies wholesale CTC tea across 25 Indian states and 75+ cities. Find your state and city for delivery times, MOQ, and pricing.",
   alternates: { canonical: "/available-locations" },
 };
 

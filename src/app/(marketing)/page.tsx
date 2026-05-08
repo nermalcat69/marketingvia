@@ -4,7 +4,7 @@ import { getAllCities, slugify } from "@/lib/cityData";
 import { WhatsAppQuoteBtn, WHATSAPP_DEFAULT_MESSAGE } from "@/components/whatsapp-quote-btn";
 
 export const metadata: Metadata = {
-  title: "Bulk CTC Tea Supplier Across India | BulkCTC",
+  title: "Bulk CTC Tea Supplier Across India | MarketingVia",
   description:
     "Wholesale bulk CTC tea for hotels, factories, offices, and institutions. Serving 25 states and 75+ cities across India. Direct from Assam and Dooars gardens.",
   alternates: { canonical: "/" },
@@ -41,7 +41,7 @@ export default function Home() {
   const orgLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "BulkCTC",
+    name: "MarketingVia",
     url: "https://marketingvia.in",
     description: "Bulk CTC tea wholesale supplier across India. Direct from Assam and Dooars gardens.",
   };
@@ -188,18 +188,18 @@ export default function Home() {
         <div className="bg-neutral-50 p-8 md:p-12 grid md:grid-cols-2 gap-12">
           <div>
             <p className="text-xs font-medium uppercase tracking-widest text-neutral-400 mb-4">
-              About BulkCTC
+              About MarketingVia
             </p>
             <h2 className="text-3xl font-bold tracking-tight text-neutral-900 mb-4 leading-tight">
               Garden-to-canteen.<br />No middlemen.
             </h2>
             <p className="text-neutral-600 leading-relaxed">
-              BulkCTC sources Crush-Tear-Curl tea directly from certified gardens in Assam and Dooars — India's premier CTC belt. We supply institutional buyers: factories, hotels, government offices, hospitals, and corporate campuses.
+              MarketingVia sources Crush-Tear-Curl tea directly from certified gardens in Assam and Dooars — India's premier CTC belt. We supply institutional buyers: factories, hotels, government offices, hospitals, and corporate campuses.
             </p>
           </div>
           <div>
             <p className="text-xs font-medium uppercase tracking-widest text-neutral-400 mb-4">
-              Why BulkCTC
+              Why MarketingVia
             </p>
             <div className="space-y-4">
               {[

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { StatePageContent } from "@/components/templates/StatePageContent";
 
 export const metadata: Metadata = {
-  title: "Bulk CTC Tea Supplier in West Bengal | BulkCTC",
+  title: "Bulk CTC Tea Supplier in West Bengal | MarketingVia",
   description: "Wholesale bulk CTC tea supply for businesses across West Bengal. Hotels, factories, corporate offices, and institutions. Direct from Assam gardens.",
   alternates: { canonical: "/west-bengal" },
 };

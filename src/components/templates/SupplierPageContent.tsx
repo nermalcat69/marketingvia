@@ -109,7 +109,7 @@ export function SupplierPageContent({ slug }: { slug: string }) {
     },
   ];
 
-  const whatsappMsg = `Hi, I found Gray Cup Enterprises on BulkCTC. I am from ${locationContext} and I would like to enquire about bulk CTC tea supply.`;
+  const whatsappMsg = `Hi, I found Gray Cup Enterprises on MarketingVia. I am from ${locationContext} and I would like to enquire about bulk CTC tea supply.`;
 
   return (
     <div className="bg-white">

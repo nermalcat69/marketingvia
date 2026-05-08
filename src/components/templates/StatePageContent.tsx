@@ -81,7 +81,7 @@ export function StatePageContent({ stateSlug }: { stateSlug: string }) {
           </p>
           <div className="flex flex-wrap gap-3">
             <WhatsAppQuoteBtn
-              message={`Hi, I found your number on BulkCTC. I am from ${stateName} and I would like to enquire about bulk CTC tea supply.`}
+              message={`Hi, I found your number on MarketingVia. I am from ${stateName} and I would like to enquire about bulk CTC tea supply.`}
               className="px-6 py-2.5"
             />
             <Link
@@ -117,7 +117,7 @@ export function StatePageContent({ stateSlug }: { stateSlug: string }) {
             Bulk CTC Tea in {stateName}
           </h2>
           <p className="text-neutral-600 leading-relaxed mb-4">
-            BulkCTC serves {cities.length} cities across {stateName}, supplying wholesale CTC tea to hotels, factories, corporate offices, government canteens, and educational institutions. All orders ship directly from certified Assam and Dooars gardens — no middlemen, no grade inconsistency batch to batch.
+            MarketingVia serves {cities.length} cities across {stateName}, supplying wholesale CTC tea to hotels, factories, corporate offices, government canteens, and educational institutions. All orders ship directly from certified Assam and Dooars gardens — no middlemen, no grade inconsistency batch to batch.
           </p>
           <p className="text-neutral-600 leading-relaxed mb-4">
             CTC grades available across {stateName} include BP1 (Broken Pekoe), PF1 (Pekoe Fannings), PD (Pekoe Dust), BOPSM, and fannings varieties. Each grade is suited to a different brewing style and output volume — BP1 and PF1 for hotels and corporate kitchens, PD and dust grades for high-volume factory canteens. All grades are packed in {cities[0]?.supplyChain.packagingSizes.join(" kg, ")} kg bags.
@@ -163,7 +163,7 @@ export function StatePageContent({ stateSlug }: { stateSlug: string }) {
           Industries Served in {stateName}
         </p>
         <p className="text-neutral-600 leading-relaxed mb-5 max-w-2xl">
-          Across {stateName}, BulkCTC supplies the {allIndustries.slice(0, 4).join(", ")}{allIndustries.length > 4 ? ", and more" : ""} sectors. Each industry has different volume requirements and grade preferences — we supply all of them from the same direct-garden source.
+          Across {stateName}, MarketingVia supplies the {allIndustries.slice(0, 4).join(", ")}{allIndustries.length > 4 ? ", and more" : ""} sectors. Each industry has different volume requirements and grade preferences — we supply all of them from the same direct-garden source.
         </p>
         <div className="flex flex-wrap gap-2">
           {allIndustries.map((industry) => (
@@ -217,7 +217,7 @@ export function StatePageContent({ stateSlug }: { stateSlug: string }) {
             </p>
           </div>
           <WhatsAppQuoteBtn
-            message={`Hi, I found your number on BulkCTC. I am from ${stateName} and I would like to enquire about bulk CTC tea supply.`}
+            message={`Hi, I found your number on MarketingVia. I am from ${stateName} and I would like to enquire about bulk CTC tea supply.`}
             label="Request Quote"
             className="px-8 py-3 whitespace-nowrap"
           />

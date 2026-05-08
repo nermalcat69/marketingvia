@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { CityPageContent } from "@/components/templates/CityPageContent";
 
 export const metadata: Metadata = {
-  title: "Bulk CTC Tea Supplier in Kolkata, West Bengal | BulkCTC",
+  title: "Bulk CTC Tea Supplier in Kolkata, West Bengal | MarketingVia",
   description: "Wholesale bulk CTC tea for businesses in Kolkata, West Bengal. Direct delivery from Assam gardens. Hotels, factories, corporate offices. Min. order 50 kg.",
   alternates: { canonical: "/west-bengal/kolkata" },
 };

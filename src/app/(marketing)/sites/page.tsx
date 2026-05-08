@@ -50,11 +50,11 @@ export default function SitesPage() {
           </Link>
         </div>
 
-        {/* BulkCTC Card */}
+        {/* MarketingVia Card */}
         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h2 className="text-2xl font-semibold text-gray-900">BulkCTC</h2>
+          <h2 className="text-2xl font-semibold text-gray-900">MarketingVia</h2>
           <p className="mt-3 text-gray-600">
-            BulkCTC is dedicated to explaining CTC (Crush, Tear, Curl) tea —
+            MarketingVia is dedicated to explaining CTC (Crush, Tear, Curl) tea —
             including grades, particle size, colour output, and consistency in
             bulk chai preparation.
           </p>

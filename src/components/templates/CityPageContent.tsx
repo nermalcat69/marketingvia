@@ -24,7 +24,7 @@ export function CityPageContent({ stateSlug, citySlug }: { stateSlug: string; ci
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "@id": `https://marketingvia.in/${stateSlug}/${citySlug}`,
-      name: `BulkCTC — ${cityInfo.city}`,
+      name: `MarketingVia — ${cityInfo.city}`,
       description: `Bulk CTC tea wholesale supplier serving ${cityInfo.city}, ${cityInfo.state}.`,
       url: `https://marketingvia.in/${stateSlug}/${citySlug}`,
       areaServed: [cityInfo.city, ...cityInfo.nearbyAreas].map((area) => ({
@@ -83,7 +83,7 @@ export function CityPageContent({ stateSlug, citySlug }: { stateSlug: string; ci
           </p>
           <div className="flex flex-wrap gap-3">
             <WhatsAppQuoteBtn
-              message={`Hi, I found your number on BulkCTC. I am from ${cityInfo.city}, ${stateName} and I would like to enquire about bulk CTC tea supply.`}
+              message={`Hi, I found your number on MarketingVia. I am from ${cityInfo.city}, ${stateName} and I would like to enquire about bulk CTC tea supply.`}
               className="px-6 py-2.5"
             />
             <Link
@@ -142,7 +142,7 @@ export function CityPageContent({ stateSlug, citySlug }: { stateSlug: string; ci
             CTC Tea Supply in {cityInfo.city}
           </h2>
           <p className="text-neutral-600 leading-relaxed mb-4">
-            {cityInfo.city} draws bulk CTC tea demand from its {cityInfo.industries.slice(0, 3).join(", ")} sectors. Institutional buyers — factory canteens, hotel chains, corporate campuses, and government offices — account for the majority of procurement. BulkCTC supplies these buyers directly from Assam and Dooars gardens, bypassing brokers to deliver consistent quality at wholesale prices.
+            {cityInfo.city} draws bulk CTC tea demand from its {cityInfo.industries.slice(0, 3).join(", ")} sectors. Institutional buyers — factory canteens, hotel chains, corporate campuses, and government offices — account for the majority of procurement. MarketingVia supplies these buyers directly from Assam and Dooars gardens, bypassing brokers to deliver consistent quality at wholesale prices.
           </p>
           <p className="text-neutral-600 leading-relaxed mb-4">
             The most commonly ordered grades for {cityInfo.city} include BP1 (Broken Pekoe) for medium-bodied daily brew, PF1 (Pekoe Fannings) for quick-brewing high-output kitchens, and PD (Pekoe Dust) for maximum colour and strength in mass canteens. All grades are available in {cityInfo.supplyChain.packagingSizes.join(", ")} bags.
@@ -238,7 +238,7 @@ export function CityPageContent({ stateSlug, citySlug }: { stateSlug: string; ci
             </p>
           </div>
           <WhatsAppQuoteBtn
-            message={`Hi, I found your number on BulkCTC. I am from ${cityInfo.city}, ${stateName} and I would like to enquire about bulk CTC tea supply.`}
+            message={`Hi, I found your number on MarketingVia. I am from ${cityInfo.city}, ${stateName} and I would like to enquire about bulk CTC tea supply.`}
             label="Request Quote"
             className="px-8 py-3 whitespace-nowrap"
           />

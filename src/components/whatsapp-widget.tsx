@@ -5,7 +5,7 @@ import Image from "next/image";
 import { openWhatsApp } from "@/lib/openWhatsApp";
 
 const DEFAULT_MESSAGE =
-  "Hi, I found your number on BulkCTC and I would like to enquire about bulk CTC tea.";
+  "Hi, I found your number on MarketingVia and I would like to enquire about bulk CTC tea.";
 
 // ─── swap this path to change the avatar image ────────────────────────────────
 const AVATAR_SRC = "/arjun.png";
